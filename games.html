@@ -8,13 +8,14 @@
 function handleAnswer(f)
 {
     if(checkAnswer(document.getElementById(f.answer.value)))
-      setTimeout(moveToNextQuestion, 2000);
+      setTimeout(moveToNextQuestion, 1000);
 }
 </script>
 <body onload="moveToNextQuestion()">
     <div class="wrapper">
-        <span id="QuestionHeader">
-        </span>
+    <div class="top-panel">   
+        <span id="QuestionHeader"> </span>
+    </div>    
         <div class="bottom-panel">
             <span id="Question"></span>
             
