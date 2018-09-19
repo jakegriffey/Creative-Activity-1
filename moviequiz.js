@@ -26,6 +26,7 @@ let currentQuestion = -1;
 
 function checkAnswer(element) {
     let chosenAnswer = element.id //Get the id of the button that was clicked
+    let returnValue = false;
     //Convert to an index
     if(chosenAnswer == "AnswerA") {
         chosenAnswer = 0;
@@ -34,22 +35,30 @@ function checkAnswer(element) {
     } else if(chosenAnswer == "AnswerC") {
         chosenAnswer = 2;
     } else if(chosenAnswer == "AnswerD") {
-        chosenAnswer = 3
+        chosenAnswer = 3;
     }
     
     //Check the answer
-    let answerIndicator = document.getElementById("AnswerIndicator")
+    let answerIndicator = document.getElementById("AnswerIndicator");
     if(chosenAnswer == correctChoices[currentQuestion]) {
         //show that it is correct
         answerIndicator.innerHTML = "Correct!";
         answerIndicator.style.color = "green";
-        return true;
+        returnValue = true;
     } else {
         //show that it was incorrect
         answerIndicator.innerHTML = "Incorrect.";
         answerIndicator.style.color = "red";
-        return false;
+        returnValue = false;
     }
+    
+    document.getElementById("AnswerA").disabled = true;
+    document.getElementById("AnswerB").disabled = true;
+    document.getElementById("AnswerC").disabled = true;
+    document.getElementById("AnswerD").disabled = true;
+    document.getElementById("CheckButton").disabled = true;
+    
+    return returnValue
 }
 
 function moveToNextQuestion() {
@@ -66,10 +75,24 @@ function moveToNextQuestion() {
         document.getElementById("AnswerB").innerHTML = questionAnswers[currentQuestion][1];
         document.getElementById("AnswerC").innerHTML = questionAnswers[currentQuestion][2];
         document.getElementById("AnswerD").innerHTML = questionAnswers[currentQuestion][3];
+        
+        document.getElementById("AnswerA").disabled = false;
+        document.getElementById("AnswerB").disabled = false;
+        document.getElementById("AnswerC").disabled = false;
+        document.getElementById("AnswerD").disabled = false;
+        document.getElementById("CheckButton").disabled = false;
     
         //Remove Answer Indicator
         document.getElementById("AnswerIndicator").innerHTML = "";
     } else {
         //move to final screen
     }
+    
+    
+}
+
+function handleAnswer(f)
+{
+    if(checkAnswer(document.getElementById(f.answer.value)))
+      setTimeout(moveToNextQuestion, 1000);
 }

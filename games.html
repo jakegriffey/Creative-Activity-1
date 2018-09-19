@@ -4,13 +4,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <script type="text/javascript" src="moviequiz.js"></script>
-<script> 
-function handleAnswer(f)
-{
-    if(checkAnswer(document.getElementById(f.answer.value)))
-      setTimeout(moveToNextQuestion, 1000);
-}
-</script>
+
 <body onload="moveToNextQuestion()">
     <div class="wrapper">
     <div class="top-panel">   
@@ -30,7 +24,7 @@ function handleAnswer(f)
             <input type="radio" value="AnswerD" name="answer" id="AnswerD"> <br>
             
             <span id="AnswerIndicator"></span>
-            <input type="button" onclick="handleAnswer(this.form)" value="Check answer">
+            <input type="button" onclick="handleAnswer(this.form)" value="Check answer" id = "CheckButton">
             </form>
             
         </div>

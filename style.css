@@ -1,9 +1,15 @@
+@font-face {
+    font-family: Jeopardy;
+    src: url(./gyparody.ttf)
+}
+
 .wrapper {
     
 }
 
 .top-panel {
     background-color: green;
+    font: Jeopardy;
 }
 
 .bottom-panel {
