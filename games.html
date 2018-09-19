@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript" src="moviequiz.js"></script>
+<script> 
+function handleAnswer(f)
+{
+    if(checkAnswer(document.getElementById(f.answer.value)))
+      setTimeout(moveToNextQuestion, 2000);
+}
+</script>
+<body onload="moveToNextQuestion()">
+    <div class="wrapper">
+        <span id="QuestionHeader">
+        </span>
+        <div class="bottom-panel">
+            <span id="Question"></span>
+            
+            <form action> 
+            <span id="AnswerA"></span>
+            <input type="radio" value="AnswerA" name="answer" id="AnswerA"> <br>
+            <span id="AnswerB"></span>
+            <input type="radio" value="AnswerB" name="answer" id="AnswerB"> <br>
+            <span id="AnswerC"></span>
+            <input type="radio" value="AnswerC" name="answer" id="AnswerC"> <br>
+            <span id="AnswerD"></span>
+            <input type="radio" value="AnswerD" name="answer" id="AnswerD"> <br>
+            
+            <span id="AnswerIndicator"></span>
+            <input type="button" onclick="handleAnswer(this.form)" value="Check answer">
+            </form>
+            
+        </div>
+    </div>
+        
+      
+</body>
+
+</html>

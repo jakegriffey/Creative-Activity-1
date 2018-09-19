@@ -26,7 +26,6 @@ let currentQuestion = -1;
 
 function checkAnswer(element) {
     let chosenAnswer = element.id //Get the id of the button that was clicked
-    
     //Convert to an index
     if(chosenAnswer == "AnswerA") {
         chosenAnswer = 0;
@@ -40,14 +39,16 @@ function checkAnswer(element) {
     
     //Check the answer
     let answerIndicator = document.getElementById("AnswerIndicator")
-    if(chosenAnswer == questionAnswers[currentQuestion]) {
+    if(chosenAnswer == correctChoices[currentQuestion]) {
         //show that it is correct
         answerIndicator.innerHTML = "Correct!";
         answerIndicator.style.color = "green";
+        return true;
     } else {
         //show that it was incorrect
         answerIndicator.innerHTML = "Incorrect.";
         answerIndicator.style.color = "red";
+        return false;
     }
 }
 
