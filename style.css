@@ -9,7 +9,7 @@
 
 .top-panel {
     background-color: green;
-    font: Jeopardy;
+    font-family: Jeopardy; font-size: 48px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px;
 }
 
 .bottom-panel {
