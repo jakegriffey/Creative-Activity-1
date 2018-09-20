@@ -34,13 +34,10 @@
 }
 
 .questions {
+    color: white;
+    font-size: 18px;
     padding: 10px;
 }
-
-input[type="radio"] {
-    font-family: BadMofo; font-size: 36px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px; color: white;
-}
-
 
 body 
 {
