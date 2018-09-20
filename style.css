@@ -1,6 +1,7 @@
 @font-face {
     font-family: Jeopardy;
     src: url(./gyparody.ttf)
+    
 }
 
 .wrapper {
@@ -15,8 +16,7 @@
    padding: 50px;
    margin: 0px;
    text-align: center;
-   background-color: green;
-   font-family: Jeopardy; font-size: 72px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px;
+   font-family: Jeopardy; font-size: 72px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px; color:white;
 }
 
 .bottom-panel {
@@ -24,12 +24,18 @@
     text-align: center;
     flex: 1;
     padding: 10px;
-    font-size: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;color: yellow;
     margin: 0px;
 }
 
 .questions {
     
-    font-size: 18px;
+    font-size: 18px; color: white;
     padding: 10px;
+}
+
+body 
+{
+    background-color: #060CE9;
 }
