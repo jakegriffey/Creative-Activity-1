@@ -2,7 +2,7 @@ let movieQuotes = ["\"I see in your eyes the same fear that would take the heart
                        "\"We’ve all got both light and darkness inside us. What matters is the part we choose to act on.\"",
                        "\"Every time I walked away from something I wanted to forget, I told myself it was for a cause that I believed in. A cause that was worth it. Without that, we’re lost.\"",
                        "\"We used to look up at the sky and wonder at our place in the stars. Now we just look down, and worry about our place in the dirt.\"",
-                       "\"Do you know why you're afraid when you're alone? I do. I do.",
+                       "\"Do you know why you're afraid when you're alone? I do. I do.\"",
                        "\"Do I really look like a guy with a plan? You know what I am? I'm a dog chasing cars. I wouldn't know what to do with one if I caught it!\"",
                        "\"What is the most resilient parasite? Bacteria? A virus? An intestinal worm? An idea. Resilient... highly contagious. Once an idea has taken hold of the brain it's almost impossible to eradicate.\"",
                        "\"That's all it is. You just begin. You do the math. You solve one problem... and you solve the next one... and then the next. And If you solve enough problems, you get to come home.\"",
