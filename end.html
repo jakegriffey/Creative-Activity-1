@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <script>
+        function loadScore() {
+            let substring = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
+            let score = substring.substring(substring.indexOf('=') + 1, substring.length);
+            document.getElementById("Score").innerHTML = score + "%";
+        }
+    </script>
+    <body onload = "loadScore()">
+        <div class = "wrapper">
+            <div class = "top-panel">
+                <span>Your Score</span>
+            </div>
+            <div class = "bottom-panel">
+                <span id = "Score"></span>
+                <br>
+                <br>
+                <span>Click <a href = "./games.html">Here</a> To Try Again</span>
+            </div>
+        </div>
+    </body>
+</html>
