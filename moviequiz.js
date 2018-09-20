@@ -52,11 +52,6 @@ function checkAnswer(element) {
         returnValue = false;
     }
     
-    document.getElementById("AnswerA").disabled = true;
-    document.getElementById("AnswerB").disabled = true;
-    document.getElementById("AnswerC").disabled = true;
-    document.getElementById("AnswerD").disabled = true;
-    document.getElementById("CheckButton").disabled = true;
     
     return returnValue
 }
@@ -69,6 +64,8 @@ function moveToNextQuestion() {
         //Update header and question
         document.getElementById("QuestionHeader").innerHTML = "Question " + (currentQuestion + 1);
         document.getElementById("Question").innerHTML = movieQuotes[currentQuestion];
+        
+        
     
         //Update Answers
         document.getElementById("AnswerA").innerHTML = questionAnswers[currentQuestion][0];
@@ -76,11 +73,6 @@ function moveToNextQuestion() {
         document.getElementById("AnswerC").innerHTML = questionAnswers[currentQuestion][2];
         document.getElementById("AnswerD").innerHTML = questionAnswers[currentQuestion][3];
         
-        document.getElementById("AnswerA").disabled = false;
-        document.getElementById("AnswerB").disabled = false;
-        document.getElementById("AnswerC").disabled = false;
-        document.getElementById("AnswerD").disabled = false;
-        document.getElementById("CheckButton").disabled = false;
     
         //Remove Answer Indicator
         document.getElementById("AnswerIndicator").innerHTML = "";
@@ -95,4 +87,6 @@ function handleAnswer(f)
 {
     if(checkAnswer(document.getElementById(f.answer.value)))
       setTimeout(moveToNextQuestion, 1000);
+    var radio=document.getElementById(f.answer.value.replace("Answer", ""));
+    radio.checked = false;
 }

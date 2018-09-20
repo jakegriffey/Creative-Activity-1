@@ -4,14 +4,24 @@
 }
 
 .wrapper {
-    
+     display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .top-panel {
-    background-color: green;
-    font-family: Jeopardy; font-size: 48px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px;
+   flex: 0 0 65%;
+   padding: 50px;
+   margin: 0px;
+   text-align: center;
+   background-color: green;
+   font-family: Jeopardy; font-size: 72px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 26.4px;
 }
 
 .bottom-panel {
     text-align: center;
+    flex: 1;
+    padding: 3px;
+    margin: 0px;
 }
