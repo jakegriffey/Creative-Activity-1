@@ -24,6 +24,8 @@ let correctChoices = [0, 2, 3, 2, 0, 1, 3, 1, 2, 0];
 
 let currentQuestion = -1;
 
+var points = 0;
+
 function checkAnswer(element) {
     let chosenAnswer = element.id //Get the id of the button that was clicked
     let returnValue = false;
@@ -44,6 +46,7 @@ function checkAnswer(element) {
         //show that it is correct
         answerIndicator.innerHTML = "Correct!";
         answerIndicator.style.color = "green";
+        points++;
         returnValue = true;
     } else {
         //show that it was incorrect
@@ -77,6 +80,9 @@ function moveToNextQuestion() {
         //Remove Answer Indicator
         document.getElementById("AnswerIndicator").innerHTML = "";
     } else {
+        
+        //just for debugging to make sure that it's outputing the right number of points.
+        alert(points);
         //move to final screen
     }
     
@@ -85,8 +91,10 @@ function moveToNextQuestion() {
 
 function handleAnswer(f)
 {
-    if(checkAnswer(document.getElementById(f.answer.value)))
-      setTimeout(moveToNextQuestion, 1000);
+    checkAnswer(document.getElementById(f.answer.value))
+    //unconditionally moving to next question
+    setTimeout(moveToNextQuestion, 2000);
+    //This code clears the answer choice when you answer incorrectly or are going to move to the next question  
     var radio=document.getElementById(f.answer.value.replace("Answer", ""));
     radio.checked = false;
 }

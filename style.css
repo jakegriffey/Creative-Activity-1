@@ -20,8 +20,16 @@
 }
 
 .bottom-panel {
+    
     text-align: center;
     flex: 1;
-    padding: 3px;
+    padding: 10px;
+    font-size: 24px;
     margin: 0px;
+}
+
+.questions {
+    
+    font-size: 18px;
+    padding: 10px;
 }
